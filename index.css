@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main{
+    text-align: center;
+    margin-top: 20px;
+
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.main input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+#result{
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+   
+}

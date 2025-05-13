@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: red;
+        margin-top: 50px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        background-color: blue;
+        color: white;
+        border-radius: 20px ;
+        border: solid red;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+</style>
+<body>
+    
+
+
+    <h1 id="value">0</h1>
+    <div>
+
+
+        <button id="increment">Increment</button> 
+        <button id="decrement">Decrement</button>
+        <button id="reset">Reset</button>
+
+    </div>
+
+
+
+    <script>
+
+
+// let increment = document.getElementById("increment");
+// let decrement = document.getElementById("decrement");
+// let reset = document.getElementById("reset");
+// let val = document.getElementById("value");
+
+
+
+// increment.addEventListener("click", ()=>{
+
+// val.innerText = parseInt(val.innerText) + 1;
+// })
+
+// decrement.addEventListener("click", ()=>{
+// val.innerText = parseInt(val.innerText) - 1;
+// })
+// reset.addEventListener("click", ()=>{
+// val.innerText = 0;
+// })  
+
+
+
+
+
+let increment = document.getElementById("increment");
+let decrement = document.getElementById("decrement");
+let reset = document.getElementById("reset");
+let val = document.getElementById("value");
+
+increment.addEventListener("click", () => {
+  val.innerText = parseInt(val.innerText) + 1;
+});
+
+decrement.addEventListener("click", () => {
+  if (parseInt(val.innerText) > 0) {
+    val.innerText = parseInt(val.innerText) - 1;
+  }
+
+});
+
+reset.addEventListener("click", () => {
+  val.innerText = 0;
+});
+
+
+    </script>
+</body>
+</html>

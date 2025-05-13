@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+
+ <h1>Assignment 2</h1>
+
+    <div class="main">
+
+    <input type="text" id="input" placeholder="Type your friend name  ">
+    <button onclick="addToArray()">Add to Array</button>
+    <button onclick="printArray()">Print To Array</button>
+
+    <div id="result"></div>
+
+</div>
+
+
+
+
+<script>
+
+
+
+
+    
+
+
+let arr=[]
+function addToArray(){
+    let target=document.querySelector("input") .value;
+    arr.push(target);
+    console.log(arr);
+    input .value=" ";
+}
+function printArray(){
+    let resultdiv=document.getElementById("result");
+    resultdiv.innerText=arr .reverse();
+}
+
+</script>
+
+
+</body>
+</html>

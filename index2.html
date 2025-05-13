@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+
+ <h1>Assignment 3</h1>
+
+    <div class="main">
+
+    <input type="text" id="input" placeholder="Type your friend name  ">
+    <button onclick="addToArray()">Add to Array</button>
+    <button onclick="printArray()">Print To Array</button>
+
+    <div id="result"></div>
+
+</div>
+
+
+
+
+<script>
+
+
+
+
+    
+
+
+let arr = [];
+
+function addToArray() {
+  let input = document.getElementById("input");
+  let value = input.value.trim();
+  if (value) {
+    arr.push(value);
+    input.value = "";
+  }
+}
+
+function printArray() {
+  let resultDiv = document.getElementById("result");
+  resultDiv.innerText = "";
+  let i = 0;
+
+  let interval = setInterval(() => {
+    if (i < arr.length) {
+      resultDiv.innerText += arr[i] + ",";
+      i++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 1000);
+}
+</script>
+
+
+</body>
+</html>
