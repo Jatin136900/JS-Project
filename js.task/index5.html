@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    input {
+        padding: 15px 20px 15px 20px;
+        width: 300px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 13px 30px;
+        border-radius: 10px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #result {
+        font-size: 20px;
+        margin-top: 20px;
+        color: red;
+    }
+</style>
+<body>
+
+  <input type="text" id="emailInput" placeholder="Enter your email">
+  <button id="btn" >Get Domain</button>
+
+  <p id="result"></p>
+
+  <script>
+    let button=document.getElementById("btn")
+    button.addEventListener("click",()=>
+    {
+      let email = document.getElementById("emailInput").value;
+      if (email.includes("@")) {
+        let domainPart = email.split("@")[1];
+        let domainName = domainPart.substring(0, domainPart.lastIndexOf("."));
+        document.getElementById("result").innerText = domainName;
+      }
+    })
+  </script>
+</body>
+</html>
+
+
