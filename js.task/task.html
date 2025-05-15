@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add input generator</title>
+</head>
+
+<style>
+   #parent {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    border: solid 1px #ccc;
+    padding: 50px;
+
+
+}
+
+
+#btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;    
+}   
+#container {
+    margin-top: 20px;
+    font-size: 15px;
+    color: steelblue;
+}           
+
+#container input{
+
+
+     width: 80%;
+    padding: 15px 20px 15px 25px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-top: 20px;
+
+}
+#input {
+    width: 80%;
+    padding: 15px 20px 15px 25px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+</style>
+<body>
+    
+  <div id="parent">
+    <h1>JS Create Elemnts Demo</h1>
+    <button id="btn">+Add Input</button>
+    <input type="text" id="input" placeholder="Enter your massage" />
+    <div id="container"></div>
+
+
+  </div>
+
+    <script>
+    let count = 0;
+    let button = document.getElementById("btn");
+    let inputField = document.getElementById("input");
+    let container = document.getElementById("container");
+
+    button.addEventListener("click", () => {
+      let inputText = inputField.value.trim();
+      if (count < 5) {
+        let hulk = document.createElement("input");
+        hulk.placeholder="Enter your message "
+        hulk.textContent = inputText;
+        container.appendChild(hulk);
+        count++;
+        inputField.value = ""; 
+      } else {
+        alert("You have used all the inputs:5");
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>
+
+
+ 

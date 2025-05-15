@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elemnts</title>
+</head>
+
+<style>
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+div {
+    margin-top: 20px;
+    font-size: 15px;
+    color: steelblue;
+}
+
+</style>
+
+<body>
+    
+<button id="btn">CLICK ME</button>
+
+<div id="main"></div>
+
+
+
+
+
+
+
+<script>
+
+
+let button=document.getElementById("btn");
+
+button.addEventListener("click",()=>{
+
+
+let ele=document.createElement("h1");
+let content=document.createTextNode("MY NAME IS JATIN");
+console.log(ele);
+ele.append(content);
+main .append(ele)
+})
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

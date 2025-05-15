@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone</title>
+</head>
+<body>
+    
+
+    <div class="listone">
+
+        <ul  id="veg">
+            <li> tomoto </li>
+            <li> patato </li>
+            <li> garlic </li>
+            <li> ginger </li>
+        </ul>
+    </div>
+
+
+
+    <div class="listtwo">
+
+        <ul  id="fruits">
+            <li> apple </li>
+            <li> banana </li>
+            <li> papayaya </li>
+            <li>grapes </li>
+        </ul>
+    </div>
+
+
+
+<script>
+
+let vegis=document.getElementById("veg").firstElementChild;
+let clone=vegis.cloneNode(true);
+console.log(clone)
+
+
+let listtwo=document.getElementById("fruits");
+listtwo.append(vegis)
+
+</script>
+
+
+
+
+</body>
+</html>
